@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sanctuary Falls</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: black;
+    }
+
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 40px;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <video autoplay muted loop>
+    <source src="waterfall.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay">
+    <h1>Sanctuary Falls</h1>
+    <p>You are here. That is enough.</p>
+  </div>
+
+</body>
+</html>
