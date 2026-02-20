@@ -1,1 +1,37 @@
-signs.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Woodland Sign</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+a {
+  color: #ffd700;
+  text-decoration: none;
+  font-size: 20px;
+}
+a:hover {
+  text-decoration: underline;
+}
+</style>
+</head>
+<body>
+  <div>
+    <h1>The Woodland Sign</h1>
+    <p>Where would you like to go?</p>
+    <p><a href="cafe.html">The Woodland Café</a></p>
+    <p><a href="waterfall.html">By the Waterfall</a></p>
+    <p><a href="stones.html">Stepping Stones</a></p>
+  </div>
+</body>
+</html>
