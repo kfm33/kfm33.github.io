@@ -66,12 +66,30 @@
       margin-top: 10px;
     }
   </style>
+
+  .button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 22px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 14px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(4px);
+  transition: 0.3s ease;
+}
+.button:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-2px);
+}
 </head>
 
 <body>
   <div class="overlay">
     <h1>Sanctuary Falls</h1>
-    <p><a href="sign.html" style="color:white; text-decoration:none;">Choose your path.</a></p>
+    <a class="button" href="sign.html">Enter Sanctuary Falls</a>
   </div>
 </body>
 </html>
