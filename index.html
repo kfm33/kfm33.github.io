@@ -1,73 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sanctuary Falls</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanctuary Falls</title>
+
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-    /* Mobile tweaks */
-@media (max-width: 600px) {
-  body {
-    align-items: flex-start;     /* moves content up a bit */
-    padding: 20px;
-  }
-
-  .overlay {
-    width: 100%;
-    max-width: 340px;
-    padding: 18px;
-    border-radius: 14px;
-  }
-
-  h1 {
-    font-size: 34px;
-    line-height: 1.1;
-  }
-
-  p {
-    font-size: 16px;
-  }
-    .button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 14px 22px;
-  background: rgba(255,255,255,0.15);
-  border-radius: 14px;
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  border: 1px solid rgba(255,255,255,0.3);
-  backdrop-filter: blur(4px);
-  transition: 0.3s ease;
-}
-.button:hover {
-  background: rgba(255,255,255,0.25);
-  transform: translateY(-2px);
-}
-    body { 
-      background-image:
-      url("natureshop.jpg");
+      min-height: 100vh;
+      background-image: url("natureshop.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      min-height: 100dvh;
-      
-      font-family: Arial, 
-        sans-serif;
-      color: white;
-      
+
       display: flex;
       align-items: center;
       justify-content: center;
+
+      font-family: Arial, sans-serif;
+      color: white;
       text-align: center;
     }
 
     .overlay {
-      background: rgba(0,0,0,0.35);
+      background: rgba(0, 0, 0, 0.35);
       padding: 40px;
       border-radius: 12px;
     }
@@ -77,9 +34,23 @@
       margin: 0;
     }
 
-    p {
-      font-size: 20px;
-      margin-top: 10px;
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 22px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 14px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      border: 1px solid rgba(255,255,255,0.3);
+      backdrop-filter: blur(4px);
+      transition: 0.3s ease;
+    }
+
+    .button:hover {
+      background: rgba(255,255,255,0.25);
+      transform: translateY(-2px);
     }
   </style>
 </head>
@@ -91,5 +62,4 @@
   </div>
 </body>
 </html>
-
 
