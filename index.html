@@ -1,65 +1,297 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sanctuary Falls</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nature Nurture Wellbeing</title>
+  <meta name="description" content="A gentle space for calm, creativity, connection, and soulful wellbeing." />
   <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background-image: url("natureshop.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+    :root {
+      --sage: #9caf88;
+      --deep-sage: #6f8263;
+      --cream: #f8f5ef;
+      --sand: #e9dfd1;
+      --forest: #334236;
+      --soft-gold: #c8a96b;
+      --white: #ffffff;
+      --shadow: 0 10px 30px rgba(0,0,0,0.10);
+      --radius: 22px;
+    }
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--forest);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(rgba(51, 66, 54, 0.35), rgba(51, 66, 54, 0.45)),
+        url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 2rem;
+    }
 
-      font-family: Arial, sans-serif;
-      color: white;
+    .hero-card {
+      max-width: 760px;
+      background: rgba(248, 245, 239, 0.92);
+      backdrop-filter: blur(6px);
+      border-radius: var(--radius);
+      padding: 3rem;
+      box-shadow: var(--shadow);
       text-align: center;
     }
 
-    .overlay {
-      background: rgba(0, 0, 0, 0.35);
-      padding: 40px;
-      border-radius: 12px;
+    .eyebrow {
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      color: var(--deep-sage);
+      margin-bottom: 1rem;
+      font-weight: bold;
     }
 
     h1 {
-      font-size: 48px;
-      margin: 0;
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
     }
 
-    .button {
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 620px;
+      margin: 0 auto 1.8rem;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.95rem 1.5rem;
+      border-radius: 999px;
+      font-weight: bold;
+      transition: 0.25s ease;
       display: inline-block;
-      margin-top: 20px;
-      padding: 14px 22px;
-      background: rgba(255,255,255,0.15);
-      border-radius: 14px;
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      border: 1px solid rgba(255,255,255,0.3);
-      backdrop-filter: blur(4px);
-      transition: 0.3s ease;
     }
 
-    .button:hover {
-      background: rgba(255,255,255,0.25);
+    .btn-primary {
+      background: var(--deep-sage);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--forest);
       transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 2px solid var(--deep-sage);
+      color: var(--deep-sage);
+      background: transparent;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(111, 130, 99, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .section {
+      padding: 5rem 1.5rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-title h2 {
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      margin-bottom: 0.8rem;
+    }
+
+    .section-title p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #55655a;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.6rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin-bottom: 0.7rem;
+      font-size: 1.2rem;
+    }
+
+    .soft-section {
+      background: linear-gradient(180deg, var(--sand), var(--cream));
+    }
+
+    .quote-box {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #fffaf4;
+      padding: 2rem;
+      border-left: 6px solid var(--soft-gold);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      font-size: 1.15rem;
+    }
+
+    .email-box {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--white);
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    input[type="email"] {
+      padding: 1rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid #cfc7bb;
+      min-width: 260px;
+      width: 100%;
+      max-width: 380px;
+      font-size: 1rem;
+    }
+
+    footer {
+      padding: 2rem 1.5rem 3rem;
+      text-align: center;
+      color: #5d6a61;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        padding: 2rem 1.4rem;
+      }
     }
   </style>
 </head>
-
 <body>
-  <div class="overlay">
-    <h1>Sanctuary Falls</h1>
-    <a class="button" href="signs.html">Enter Sanctuary Falls</a>
-  </div>
+  <header class="hero">
+    <div class="hero-card">
+      <div class="eyebrow">Nature Nurture Wellbeing</div>
+      <h1>Come home to calm, creativity, and connection</h1>
+      <p>
+        A gentle online space for soulful inspiration, nature-led wellbeing, comforting content,
+        and meaningful creations designed to help you pause, breathe, and reconnect with yourself.
+      </p>
+      <div class="button-row">
+        <a href="#join" class="btn btn-primary">Join the Journey</a>
+        <a href="#about" class="btn btn-secondary">Explore More</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>What you’ll find here</h2>
+        <p>
+          Nature Nurture Wellbeing is a soft, grounding brand rooted in stillness, reflection,
+          creativity, and emotional warmth.
+        </p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>🌿 Gentle Wellbeing</h3>
+          <p>Calming ideas, reflections, and supportive tools to help you feel more centred in everyday life.</p>
+        </div>
+        <div class="card">
+          <h3>✨ Soulful Creations</h3>
+          <p>Beautiful words, visual inspiration, and meaningful products shaped by nature, comfort, and spirit.</p>
+        </div>
+        <div class="card">
+          <h3>🤍 Safe Connection</h3>
+          <p>A welcoming space for sensitive hearts, deep thinkers, and anyone craving more peace and authenticity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Why it matters</h2>
+        <p>
+          In a loud world, this space is here to offer softness, steadiness, and a place to breathe.
+        </p>
+      </div>
+      <div class="quote-box">
+        “You do not need to rush to become someone else. You are allowed to grow gently, in your own time.”
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="join">
+    <div class="container">
+      <div class="email-box">
+        <div class="section-title" style="margin-bottom: 1rem;">
+          <h2>Stay connected</h2>
+          <p>Be the first to hear about new creations, uplifting content, and gentle offerings from Nature Nurture Wellbeing.</p>
+        </div>
+        <form>
+          <input type="email" placeholder="Enter your email address" aria-label="Email address" />
+          <button type="submit" class="btn btn-primary">Sign Me Up</button>
+        </form>
+        <p style="margin-top: 1rem; font-size: 0.95rem; color: #68756d;">You can swap this form for Mailchimp, ConvertKit, Stan Store, or a simple contact link later.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>With love, Nature Nurture Wellbeing</p>
+  </footer>
 </body>
 </html>
- 
