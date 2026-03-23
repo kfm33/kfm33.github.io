@@ -1,64 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nature Nurture Wellbeing</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nature Nurture Wellbeing | Enchanted Path</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', Arial, sans-serif;
+      color: white;
+    }
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
+    .hero {
+      min-height: 100vh;
+      background: url("natureshop.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      position: relative;
+    }
 
-.hero {
-  height: 100vh;
-  background: url("natureshop.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.28);
+    }
 
-.overlay {
-  background: rgba(0,0,0,0.4);
-  padding: 40px;
-  border-radius: 30px;
-  text-align: center;
-  color: white;
-}
+    .overlay {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      width: 100%;
+      text-align: center;
+      background: rgba(46, 58, 48, 0.36);
+      border: 1px solid rgba(255,255,255,0.20);
+      border-radius: 38px;
+      padding: 3rem 2rem;
+      box-shadow: 0 0 40px rgba(255,255,255,0.08);
+      backdrop-filter: blur(6px);
+    }
 
-.button-row {
-  margin-top: 20px;
-}
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
 
-.btn {
-  display: inline-block;
-  margin: 10px;
-  padding: 12px 20px;
-  border-radius: 25px;
-  background: #7fe3a1;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-}
-</style>
+    h1 {
+      font-family: 'IM Fell English', serif;
+      font-size: clamp(2.5rem, 6vw, 4.8rem);
+      line-height: 1.08;
+      margin: 0 0 1rem;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.25);
+    }
+
+    p {
+      max-width: 700px;
+      margin: 0 auto 1.8rem;
+      font-size: 1.15rem;
+      line-height: 1.6;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 26px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: all 0.2s ease;
+      border: 1px solid rgba(255,255,255,0.65);
+      background: rgba(255,255,255,0.15);
+      color: white;
+      box-shadow: 0 0 16px rgba(255,255,255,0.14);
+    }
+
+    .btn:hover {
+      background: white;
+      color: black;
+      box-shadow: 0 0 22px rgba(255,255,255,0.32);
+      transform: translateY(-2px);
+    }
+
+    .note {
+      margin-top: 1rem;
+      font-size: 0.98rem;
+      opacity: 0.95;
+    }
+
+    @media (max-width: 700px) {
+      .overlay {
+        padding: 2rem 1.2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <section class="hero">
+    <div class="overlay">
+      <div class="eyebrow">Nature Nurture Wellbeing</div>
+      <h1>✨ Your Enchanted Path Begins Here ✨</h1>
+      <p>
+        Step into a gentle storybook world of calm, comfort, woodland wonder,
+        hidden paths, and soulful places to explore at your own pace.
+      </p>
 
-<div class="hero">
-  <div class="overlay">
-    <h1>✨ Sanctuary Falls ✨</h1>
-    <p>Step into a world of calm, wonder, and discovery</p>
+      <div class="button-row">
+        <a href="natureshop.html" class="btn">✨ Wander Inside</a>
+      </div>
 
-<div class="button-row">
-  <a href="signs.html" class="btn">🌿 Sanctuary Falls</a>
-  <a href="river.html" class="btn">🌊 River</a>
-  <a href="cafe.html" class="btn">☕ Café</a>
-  <a href="insideshop.html" class="btn">🛍️ Shop</a>
-</div>
-  </div>
-</div>
-
+      <div class="note">
+        A soft beginning into Sanctuary Falls, where you can wander further or step into the shop.
+      </div>
+    </div>
+  </section>
 </body>
 </html>
