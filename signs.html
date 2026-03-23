@@ -4,7 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sanctuary Path</title>
+<div style="margin-top:40px;">
+  <p>🍃 Pause… something is here for you</p>
+  <button onclick="generateMessage()">✨ Reveal Your Message</button>
 
+  <div id="messageBox" style="display:none; margin-top:20px;">
+    <p><strong>Affirmation:</strong> <span id="affirmation"></span></p>
+    <p><strong>Image Idea:</strong> <span id="imageIdea"></span></p>
+    <p><strong>Theme:</strong> <span id="theme"></span></p>
+  </div>
+</div>
 <style>
 body {
     margin: 0;
