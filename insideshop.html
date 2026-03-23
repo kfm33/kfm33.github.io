@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inside the Shop</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #edf4f0, #e5efe9);
+      color: #233a31;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .intro {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .shop-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .shop-card {
+      background: rgba(255,255,255,0.85);
+      border-radius: 20px;
+      padding: 1.2rem;
+      text-decoration: none;
+      color: #233a31;
+      box-shadow: 0 8px 18px rgba(40,72,48,0.12);
+      transition: 0.2s ease;
+    }
+
+    .shop-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(40,72,48,0.18);
+    }
+
+    .shop-card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .shop-card p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      color: #233a31;
+    }
+
+    @media (max-width: 600px) {
+      .shop-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>✨ Inside the Shop</h1>
+
+  <p class="intro">
+    You’ve stepped inside.  
+    Take a gentle look around — each corner holds something created with care, calm, and meaning.
+  </p>
+
+  <div class="shop-grid">
+
+    <a href="#" class="shop-card">
+      <h2>🧘‍♀️ Calm & Grounding</h2>
+      <p>Gentle tools to help you pause, breathe, and return to yourself.</p>
+    </a>
+
+    <a href="#" class="shop-card">
+      <h2>🌿 Nature Gifts</h2>
+      <p>Inspired by woodland, water, and quiet natural beauty.</p>
+    </a>
+
+    <a href="#" class="shop-card">
+      <h2>🔮 Spiritual Tools</h2>
+      <p>Oracle, intention pieces, and quiet guidance.</p>
+    </a>
+
+    <a href="#" class="shop-card">
+      <h2>🎧 Sacred Within</h2>
+      <p>Music, energy, and emotional expression through sound.</p>
+    </a>
+
+  </div>
+
+  <a href="shop.html" class="back">← Back to the shop door</a>
+
+</body>
+</html>
