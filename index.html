@@ -81,10 +81,13 @@
       max-width: 860px;
       padding: 3rem;
       text-align: center;
-      border-radius: var(--radius);
+      border-radius: 999px; /* smooth oval */
       background: var(--panel);
-      border: 1px solid rgba(255,255,255,0.28);
-      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,0.25);
+      box-shadow:
+        0 0 60px rgba(160, 220, 190, 0.25),
+        0 0 120px rgba(140, 200, 170, 0.15),
+        var(--shadow);
       backdrop-filter: blur(6px);
     }
 
@@ -350,10 +353,48 @@
         width: 100%;
       }
     }
+  
+    /* ✨ Magical pulse glow */
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 60px rgba(160,220,190,0.25), 0 0 120px rgba(140,200,170,0.15), var(--shadow); }
+      50% { box-shadow: 0 0 80px rgba(170,230,200,0.35), 0 0 160px rgba(150,210,180,0.25), var(--shadow); }
+      100% { box-shadow: 0 0 60px rgba(160,220,190,0.25), 0 0 120px rgba(140,200,170,0.15), var(--shadow); }
+    }
+
+    .hero-card {
+      animation: pulseGlow 6s ease-in-out infinite;
+    }
+
+    /* ✨ Sparkles */
+    .sparkles {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background-image:
+        radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.6), transparent),
+        radial-gradient(2px 2px at 70% 40%, rgba(255,255,255,0.5), transparent),
+        radial-gradient(2px 2px at 40% 70%, rgba(255,255,255,0.4), transparent),
+        radial-gradient(2px 2px at 80% 80%, rgba(255,255,255,0.5), transparent);
+      animation: sparkleMove 12s linear infinite;
+    }
+
+    @keyframes sparkleMove {
+      from { transform: translateY(0); }
+      to { transform: translateY(-20px); }
+    }
+
+    /* ✨ Button glow on hover */
+    .btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 0 18px rgba(120, 220, 170, 0.5), 0 8px 18px rgba(40,72,48,0.16);
+    }
+
   </style>
 </head>
 <body>
   <header class="hero">
+    <div class="sparkles"></div>
     <img src="natureshop.jpg" alt="" class="hero-bg">
     <div class="hero-card">
       <div class="eyebrow">Nature Nurture Wellbeing</div>
@@ -364,7 +405,7 @@
       </p>
       <div class="button-row">
         <a href="sanctuary.html" class="btn btn-primary">✨ Wander Inside</a>
-        <a href="#discover" class="btn btn-secondary">🗺️ Choose a Path</a>
+        <a href="#discover" class="btn btn-secondary">ℹ️ More Info</a>
       </div>
       <div class="hero-note">A playful, magical welcome with gentle wonder, cozy discovery, and a little spark of adventure.</div>
     </div>
@@ -434,8 +475,25 @@
         </div>
         <div class="button-row">
           <a href="sanctuary.html" class="btn btn-primary">✨ Continue Wandering</a>
-          <a href="#discover" class="btn btn-secondary">🗺️ See the Wonders</a>
+          <a href="#discover" class="btn btn-secondary">🌈 Play & Discover</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="game">
+    <div class="container">
+      <div class="section-title">
+        <h2>🌈 Little Sensory Game 🌈</h2>
+        <p>Take a gentle moment… what can you spot?</p>
+      </div>
+      <div class="big-card">
+        <p>
+          👀 How many rainbows can you find?<br><br>
+          ☕ What’s sitting quietly in the café?<br><br>
+          🦉 Can you spot any woodland animals?<br><br>
+          ✨ What detail made you pause?
+        </p>
       </div>
     </div>
   </section>
