@@ -87,6 +87,43 @@ button:hover {
     </div> 
     
 </div>
+<script>
+function generateMessage() {
+  const affirmations = [
+    "Like the quiet river, you are allowed to flow gently today.",
+    "You do not need to rush — the forest grows in its own time.",
+    "Your energy is enough, even in stillness.",
+    "Breathe in calm, breathe out pressure.",
+    "You are held, even when things feel uncertain."
+  ];
 
+  const images = [
+    "misty woodland with a deer",
+    "waterfall flowing over mossy rocks",
+    "sunrise over calm sea",
+    "forest path with soft golden light",
+    "owl resting on a tree branch at dusk"
+  ];
+
+  const themes = [
+    "stillness",
+    "renewal",
+    "grounding",
+    "gentle energy",
+    "inner peace"
+  ];
+
+  document.getElementById("affirmation").textContent =
+    affirmations[Math.floor(Math.random() * affirmations.length)];
+
+  document.getElementById("imageIdea").textContent =
+    images[Math.floor(Math.random() * images.length)];
+
+  document.getElementById("theme").textContent =
+    themes[Math.floor(Math.random() * themes.length)];
+
+  document.getElementById("messageBox").style.display = "block";
+}
+</script>
 </body>
 </html>
