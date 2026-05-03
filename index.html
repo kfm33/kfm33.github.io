@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nature Nurture Wellbeing</title>
 
   <style>
     body {
@@ -14,44 +15,32 @@
     }
 
     .overlay {
-      background: rgba(10, 25, 20, 0.18);
+      position: relative;
+      background: rgba(10, 25, 20, 0.10);
       min-height: 100vh;
       box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    }
+
+    .top-text {
+      position: absolute;
+      top: 45px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.25rem;
       text-align: center;
-      padding: 40px 20px;
-    }
-.top {
-  margin-top: 60px;
-}
-
-.bottom {
-  margin-bottom: 100px;
-}
-
-.small {
-  font-size: 0.95rem;
-  opacity: 0.75;
-  margin-top: 12px;
-}
-    h1 {
-      font-size: clamp(4rem, 7vw, 6rem);
-      margin: 0;
-      text-shadow: 0 4px 25px rgba(0,0,0,0.6);
+      white-space: nowrap;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.65);
     }
 
-    .sub {
-      font-size: 1.3rem;
-      margin-top: 12px;
-      margin-bottom: 28px;
-      text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    .bottom-button {
+      position: absolute;
+      bottom: 70px;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .enter-btn {
-      padding: 14px 28px;
+      padding: 14px 32px;
       border-radius: 999px;
       border: 1px solid rgba(255,255,255,0.8);
       background: rgba(255,255,255,0.15);
@@ -70,297 +59,14 @@
       transform: translateY(-2px);
     }
 
-    .footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
-
     @media (max-width: 700px) {
-      h1 {
-        font-size: clamp(3rem, 9vw, 4.5rem);
+      .top-text {
+        top: 35px;
+        font-size: 1.05rem;
       }
 
-      .sub {
-        font-size: 1.1rem;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Georgia, serif;
-      color: white;
-      background: url("nature-hare.png") no-repeat center center fixed;
-      background-size: cover;
-    }
-
-    .overlay {
-      background: rgba(10, 25, 20, 0.18);
-      min-height: 100vh;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: center;
-      text-align: center;
-      padding: 40px 20px 20px;
-    }
-.top {
-  margin-top: 60px;
-}
-
-.bottom {
-  margin-bottom: 150px;
-}
-
-.small {
-  font-size: 0.95rem;
-  opacity: 0.75;
-  margin-top: 12px;
-}
-    h1 {
-      font-size: clamp(4rem, 7vw, 6rem);
-      margin: 0;
-      text-shadow: 0 4px 25px rgba(0,0,0,0.6);
-    }
-
-    .sub {
-      font-size: 1.2rem;
-      margin-top: 16px;
-      margin-bottom: 28px;
-      text-shadow: 0 2px 12px rgba(0,0,0,0.5);
-    }
-
-    .enter-btn {
-      padding: 14px 28px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.8);
-      background: rgba(255,255,255,0.15);
-      color: white;
-      font-size: 1.1rem;
-      cursor: pointer;
-      backdrop-filter: blur(4px);
-      box-shadow: 0 0 18px rgba(255,255,255,0.18);
-      transition: all 0.25s ease;
-    }
-
-    .enter-btn:hover {
-      background: white;
-      color: black;
-      box-shadow: 0 0 28px rgba(255,255,255,0.35);
-      transform: translateY(-2px);
-    }
-
-    .footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
-
-    @media (max-width: 700px) {
-      h1 {
-        font-size: clamp(3rem, 9vw, 4.5rem);
-      }
-
-      .sub {
-        font-size: 1.1rem;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="top-text">
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Georgia, serif;
-      color: white;
-      background: url("nature-hare.png") no-repeat center center fixed;
-      background-size: cover;
-    }
-
-    .overlay {
-      background: rgba(10, 25, 20, 0.18);
-      min-height: 100vh;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 40px 20px;
-    }
-.top {
-  margin-top: 60px;
-}
-
-.bottom {
-  margin-bottom: 120px;
-}
-
-.small {
-  font-size: 0.95rem;
-  opacity: 0.75;
-  margin-top: 12px;
-}
-    h1 {
-      font-size: clamp(4rem, 7vw, 6rem);
-      margin: 0;
-      text-shadow: 0 4px 25px rgba(0,0,0,0.6);
-    }
-
-    .sub {
-      font-size: 1.3rem;
-      margin-top: 12px;
-      margin-bottom: 28px;
-      text-shadow: 0 2px 12px rgba(0,0,0,0.5);
-    }
-
-    .enter-btn {
-      padding: 14px 28px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.8);
-      background: rgba(255,255,255,0.15);
-      color: white;
-      font-size: 1.1rem;
-      cursor: pointer;
-      backdrop-filter: blur(4px);
-      box-shadow: 0 0 18px rgba(255,255,255,0.18);
-      transition: all 0.25s ease;
-    }
-
-    .enter-btn:hover {
-      background: white;
-      color: black;
-      box-shadow: 0 0 28px rgba(255,255,255,0.35);
-      transform: translateY(-2px);
-    }
-
-    .footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
-
-    @media (max-width: 700px) {
-      h1 {
-        font-size: clamp(3rem, 9vw, 4.5rem);
-      }
-
-      .sub {
-        font-size: 1.1rem;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Georgia, serif;
-      color: white;
-      background: url("nature-hare.png") no-repeat center center fixed;
-      background-size: cover;
-    }
-
-    .overlay {
-      background: rgba(10, 25, 20, 0.18);
-      min-height: 100vh;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: center;
-      text-align: center;
-      padding: 40px 20px 180px;
-    }
-.top {
-  margin-top: 60px;
-}
-
-.bottom {
-  margin-bottom: 120px;
-}
-
-.small {
-  font-size: 0.95rem;
-  opacity: 0.75;
-  margin-top: 12px;
-}
-    h1 {
-      font-size: clamp(4rem, 7vw, 6rem);
-      margin: 0;
-      text-shadow: 0 4px 25px rgba(0,0,0,0.6);
-    }
-
-    .sub {
-      font-size: 1.2rem;
-      margin-top: 16px;
-      margin-bottom: 28px;
-      text-shadow: 0 2px 12px rgba(0,0,0,0.5);
-    }
-
-    .enter-btn {
-      padding: 14px 28px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.8);
-      background: rgba(255,255,255,0.15);
-      color: white;
-      font-size: 1.1rem;
-      cursor: pointer;
-      backdrop-filter: blur(4px);
-      box-shadow: 0 0 18px rgba(255,255,255,0.18);
-      transition: all 0.25s ease;
-    }
-
-    .enter-btn:hover {
-      background: white;
-      color: black;
-      box-shadow: 0 0 28px rgba(255,255,255,0.35);
-      transform: translateY(-2px);
-    }
-
-    .footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
-
-    @media (max-width: 700px) {
-      h1 {
-        font-size: clamp(3rem, 9vw, 4.5rem);
-      }
-
-      .sub {
-        font-size: 1.1rem;
+      .bottom-button {
+        bottom: 45px;
       }
     }
   </style>
@@ -368,28 +74,17 @@
 
 <body>
   <div class="overlay">
-    <div class="sub">
+
+    <div class="top-text">
       Breathe… you are here
     </div>
 
-    <button class="enter-btn" onclick="location.href='natureshop.html'">
-      Enter gently
-    </button>
-  </div>
-</body>
-</html>
-
-</html>
-    <div class="sub">
-      Breathe… you are here
+    <div class="bottom-button">
+      <button class="enter-btn" onclick="location.href='natureshop.html'">
+        Enter gently
+      </button>
     </div>
 
-    <button class="enter-btn" onclick="location.href='natureshop.html'">
-      Enter gently
-    </button>
   </div>
 </body>
 </html>
-
-</html>
-
