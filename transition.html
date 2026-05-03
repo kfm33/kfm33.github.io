@@ -11,9 +11,11 @@ body {
   margin: 0;
   font-family: Georgia, serif;
   color: white;
-  background: url("nature-hare.png") no-repeat center center;
-  background-size: contain;
-  background-color:#102018;
+
+  /* YOUR IMAGE HERE */
+  background: url("transition.png") no-repeat center center;
+  background-size: cover;
+  background-color: #102018;
 }
 
 .overlay {
@@ -21,14 +23,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  background: rgba(10,25,20,0.35);
+  background: rgba(10,25,20,0.25);
 }
 
-.text {
-  font-size: 1.4rem;
+/* optional soft fade */
+.fade {
   opacity: 0;
-  animation: fadeIn 3s ease forwards;
+  animation: fadeIn 2s ease forwards;
 }
 
 @keyframes fadeIn {
@@ -38,12 +39,15 @@ body {
 </head>
 
 <body>
+
+<div class="overlay">
+  <div class="fade"></div>
 </div>
 
 <script>
 setTimeout(function() {
-  window.location.href = "transition.png";
-}, 3500);
+  window.location.href = "natureshop.html";
+}, 2500);
 </script>
 
 </body>
