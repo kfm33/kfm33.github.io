@@ -17,9 +17,12 @@ body {
   position: relative;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  gap: 22px;
+  padding: 20px 12px;
+  box-sizing: border-box;
+
 }
 
 .hero-image {
@@ -30,12 +33,13 @@ body {
 }
 
 .top-text {
-  position: absolute;
+  position: static;
   top: 55px;
   width: 100%;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1 rem;
   text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+  margin: 0;
 }
 
 .bottom-button {
@@ -69,8 +73,9 @@ body {
   }
 
   .hero-image {
-    width: 95%;
-    max-width: none;
+    width: 92%;
+    max-width: 360px;
+    margin: 0 auto;
   }
 
   .top-text {
