@@ -88,7 +88,33 @@ body {
   <button class="enter-btn" onclick="location.href='transition.html'">
     Enter gently
   </button>
+@media (max-width: 700px) {
+  .hero-image {
+    content: url("YOUR-MOBILE-IMAGE.png");
+    width: 95%;
+    max-width: 430px;
+    margin: 0 auto;
+    display: block;
+  }
 
+  .overlay {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .top-text {
+    position: static;
+    font-size: 1rem;
+  }
+
+  .bottom-button {
+    position: static;
+  }
+}
 </div>
 
 </body>
