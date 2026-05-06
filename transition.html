@@ -1,101 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<img src="transitionnew.png" class="bg" alt="">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<title>Transition</title>
-
-<style>
-body {
-  margin: 0;
-  font-family: Georgia, serif;
-  color: white;
-
-  /* YOUR IMAGE HERE */
-  background: url("transitionnew.png") no-repeat center center;
-  background-size: cover;
-  background-color: #102018;
-}
-
-.overlay {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(10,25,20,0.25);
-}
-
-/* optional soft fade */
-.fade {
-  opacity: 0;
-  animation: fadeIn 2s ease forwards;
-}
-
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-</style>
-</head>
-
-<body>
-
-<div class="overlay">
-  <div class="fade"></div>
-</div>
-<!DOCTYPE html>
-<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Transition</title>
 
 <style>
+
 body {
   margin: 0;
   font-family: Georgia, serif;
-  color: white;
-  background: url("transition.png") no-repeat center center fixed;
+  background: url("transitionnew.png") no-repeat center center;
   background-size: cover;
+  background-color: #102018;
+  min-height: 100vh;
 }
 
+/* DARK OVERLAY */
 .overlay {
   min-height: 100vh;
-  position: relative;
   background: rgba(10,25,20,0.18);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.continue-btn {
-  position: absolute;
-  bottom: 35px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 14px 32px;
+/* BUTTONS */
+.btn {
+  padding: 14px 30px;
   border-radius: 999px;
   border: 1px solid rgba(255,255,255,0.8);
   background: rgba(255,255,255,0.15);
   color: white;
   font-size: 1.1rem;
   cursor: pointer;
+  box-shadow: 0 0 20px rgba(255,255,255,0.25);
   backdrop-filter: blur(4px);
-  box-shadow: 0 0 18px rgba(255,255,255,0.18);
+
+  width: 280px;
 }
 
-.continue-btn:hover {
+.btn:hover {
   background: white;
   color: black;
 }
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+  body {
+    background-position: center center;
+  }
+
+  .btn {
+    width: 240px;
+    font-size: 1rem;
+  }
+
+}
+
 </style>
 </head>
 
 <body>
-  <div class="overlay">
-    <button class="continue-btn" onclick="location.href='natureshop.html'">
-      Continue gently
-    </button>
-  </div>
-</body>
-</html>
+
+<div class="overlay">
+
+  <button class="btn" onclick="location.href='shop.html'">
+    Nature Nurture Wellbeing Shop
+  </button>
+
+  <button class="btn" onclick="location.href='sanctuary.html'">
+    Enter Sanctuary Falls
+  </button>
+
+</div>
+
 </body>
 </html>
