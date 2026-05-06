@@ -13,42 +13,37 @@ body {
   color: white;
 }
 
-/* MAIN LAYOUT */
 .container {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
-  padding: 40px 20px;
+  padding: 30px 20px;
+  box-sizing: border-box;
 }
 
-/* TOP TEXT */
 .top-text {
-  font-size: 1.2rem;
-  margin-top: 10px;
+  font-size: 1.4rem;
 }
 
-/* IMAGE */
 .hero-image {
-  width: 100%;
-  max-width: 900px;
+  width: 90%;
+  max-width: 850px;
   height: auto;
+  display: block;
 }
 
-/* BUTTON */
 .enter-btn {
-  padding: 14px 30px;
+  padding: 14px 34px;
   border-radius: 999px;
   border: 1px solid rgba(255,255,255,0.8);
   background: rgba(255,255,255,0.15);
   color: white;
   font-size: 1.1rem;
   cursor: pointer;
-  backdrop-filter: blur(4px);
-  box-shadow: 0 0 18px rgba(255,255,255,0.18);
-  margin-bottom: 20px;
+  box-shadow: 0 0 22px rgba(255,255,255,0.25);
 }
 
 .enter-btn:hover {
@@ -56,20 +51,26 @@ body {
   color: black;
 }
 
-/* MOBILE */
+/* MOBILE ONLY */
 @media (max-width: 700px) {
+  .container {
+    justify-content: space-evenly;
+    padding: 25px 10px;
+  }
 
   .top-text {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .hero-image {
+    content: url("YOUR-MOBILE-IMAGE.png");
     width: 95%;
+    max-width: 430px;
   }
 
   .enter-btn {
     font-size: 1rem;
-    padding: 12px 24px;
+    padding: 12px 28px;
   }
 }
 </style>
@@ -83,38 +84,12 @@ body {
     Breathe… you are here
   </div>
 
-  <img src="nature-hare.png" class="hero-image" alt="Nature Nurture Wellbeing">
+  <img src="nature-hare.png" class="hero-image" alt="Nature Nurture Wellbeing logo">
 
   <button class="enter-btn" onclick="location.href='transition.html'">
     Enter gently
   </button>
-@media (max-width: 700px) {
-  .hero-image {
-    content: url("YOUR-MOBILE-IMAGE.png");
-    width: 95%;
-    max-width: 430px;
-    margin: 0 auto;
-    display: block;
-  }
 
-  .overlay {
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .top-text {
-    position: static;
-    font-size: 1rem;
-  }
-
-  .bottom-button {
-    position: static;
-  }
-}
 </div>
 
 </body>
