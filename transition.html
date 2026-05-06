@@ -1,87 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Transition</title>
 
 <style>
-
 body {
   margin: 0;
-  font-family: Georgia, serif;
-  background: url("transitionnew.png") no-repeat center center;
-  background-size: cover;
   background-color: #102018;
-  min-height: 100vh;
 }
 
-/* DARK OVERLAY */
-.overlay {
-  min-height: 100vh;
-  background: rgba(10,25,20,0.18);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  gap: 20px;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
+.page {
+  position: relative;
+  width: 100vw;
+  height: 100dvh;
+  overflow: hidden;
 }
 
-/* BUTTONS */
-.btn {
-  padding: 14px 30px;
+.bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.click-shop,
+.click-sanctuary {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 360px;
+  height: 85px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.8);
-  background: rgba(255,255,255,0.15);
-  color: white;
-  font-size: 1.1rem;
   cursor: pointer;
-  box-shadow: 0 0 20px rgba(255,255,255,0.25);
-  backdrop-filter: blur(4px);
-
-  width: 280px;
 }
 
-.btn:hover {
-  background: white;
-  color: black;
+.click-shop {
+  top: 58%;
 }
 
-/* MOBILE */
+.click-sanctuary {
+  top: 72%;
+}
+
 @media (max-width: 700px) {
-
-  body {
-    background-position: center center;
+  .click-shop,
+  .click-sanctuary {
+    width: 300px;
+    height: 70px;
   }
 
-  .btn {
-    width: 240px;
-    font-size: 1rem;
+  .click-shop {
+    top: 56%;
   }
 
+  .click-sanctuary {
+    top: 68%;
+  }
 }
-
 </style>
 </head>
 
 <body>
 
-<div class="overlay">
+<div class="page">
 
-  <button class="btn" onclick="location.href='shop.html'">
-    Nature Nurture Wellbeing Shop
-  </button>
+  <img src="transitionnew.png" class="bg" alt="Choose your path">
 
-  <button class="btn" onclick="location.href='sanctuary.html'">
-    Enter Sanctuary Falls
-  </button>
+  <a href="shop.html" class="click-shop" aria-label="Nature Nurture Wellbeing Shop"></a>
+
+  <a href="sanctuary.html" class="click-sanctuary" aria-label="Enter Sanctuary Falls"></a>
 
 </div>
 
